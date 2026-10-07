@@ -1,4 +1,3 @@
-const U=["Ваш Roblox Username:"];
 const q=(q,h,o)=>({q,h,o});
 const NICK=q("Ваш Roblox Username:"),MIC=q("Чи маєте ви мікрофон?","","Так / Ні"),VC=q("Чи маєте ви Voice Chat у Roblox?","","Так / Ні"),
 GP=q("Які геймпаси ви маєте в грі?","Вкажіть усі геймпаси, пов'язані з поліцією."),TIME=q("Ваш час онлайну та часовий пояс:"),
@@ -16,19 +15,13 @@ OK("Підтверджую, що готовий дотримуватися ди�
 {id:"kord",name:"КОРД",title:"КОРД — Корпус оперативно-раптової дії",role:"",q:[
 NICK,q("Ваш вік:"),MIC,VC,GP,TIME,RULES,
 q("Наскільки добре ви граєте в PvP?","Оцініть свої навички від 1 до 10."),
-OK("Підтверджую, що готовий дотримуватися дисципліни, правил сервера та наказів старших за званням, працювати в команді, брати участь у тренуваннях та виконувати поставлені завдання.")]},
-{id:"slid",name:"Слідчий відділ",title:"Слідчий відділ",role:"",q:[
-NICK,q("Ваш вік:"),MIC,VC,GP,TIME,RULES,
-q("Наскільки добре ви розумієтеся на RP та проведенні розслідувань?","Оцініть свої навички від 1 до 10."),
-q("Розкажіть про себе та як ви уявляєте себе в цій роботі (2-3 речення):"),
-OK("Підтверджую, що готовий дотримуватися дисципліни, правил сервера та наказів старших за званням, працювати в команді, брати участь у тренуваннях, проводити розслідування та виконувати поставлені завдання.")]}
+OK("Підтверджую, що готовий дотримуватися дисципліни, правил сервера та наказів старших за званням, працювати в команді, брати участь у тренуваннях та виконувати поставлені завдання.")]}
 ];
 let cur=FORMS[0];
 const chips=document.getElementById("chips"),sheet=document.getElementById("sheet"),btn=document.getElementById("copy");
 const tg=window.Telegram&&window.Telegram.WebApp;
 if(tg){try{
   tg.ready();tg.expand();
-  if(tg.colorScheme)document.documentElement.dataset.theme=tg.colorScheme;
   if(tg.disableVerticalSwipes)tg.disableVerticalSwipes();
   const bg=getComputedStyle(document.body).backgroundColor;
   const hex=bg.match(/\d+/g).slice(0,3).map(n=>(+n).toString(16).padStart(2,"0")).join("");
